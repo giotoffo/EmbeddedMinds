@@ -1,12 +1,21 @@
 import 'package:flutter/material.dart';
+
+//PROVIDERS
 import '../providers/dataprovider.dart';
+import '../providers/profile_provider.dart';
+
+//SCREENS
+import 'profilepage.dart';
+
 import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
-import 'profilepage.dart';
-import '../providers/profile_provider.dart';
+
+//MODELS
 import '../models/linechart_hr.dart';
 import '../models/widgetCSE.dart';
 import '../models/weeklyexercise.dart';
+
+//UTILS
 import '../utils/healthscore.dart';
 
 class DataScreen extends StatefulWidget {

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+
+//MODELS
+import 'heart_rate.dart';
+
+//PLUG IN
 import 'package:intl/intl.dart';
 import 'package:graphic/graphic.dart';
-import 'heart_rate.dart';
 import 'package:flutter/cupertino.dart';
 
 class LineChartHr extends StatelessWidget {

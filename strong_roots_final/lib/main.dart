@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+
+//SCREENS
 import 'screens/splashpage.dart';
+
+//PROVIDERS
 import 'providers/profile_provider.dart';
 import 'providers/dataprovider.dart';
 import 'providers/voucherprovider.dart';
+
+//PLUG IN
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 

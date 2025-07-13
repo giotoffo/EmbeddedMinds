@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:dropdown_button2/dropdown_button2.dart';
+
+//SCREENS
 import 'package:project_app1/screens/homepage.dart';
-import 'package:provider/provider.dart';
+
+//PROVIDERS
 import '../providers/profile_provider.dart';
+
+//PLUG IN
+import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:provider/provider.dart';
 
 class Onboarding extends StatefulWidget {
   const Onboarding({Key? key}) : super(key: key);

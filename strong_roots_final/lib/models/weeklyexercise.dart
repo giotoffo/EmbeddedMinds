@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
+
+//MODELS
 import 'exercise.dart';
+
+//UTILS
 import '../utils/impact.dart';
+
+//PLUG IN
 import 'dart:math' as math;
 import 'package:flutter/cupertino.dart';
 

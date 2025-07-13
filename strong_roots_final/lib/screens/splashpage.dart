@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+
+//SCREENS
 import 'homepage.dart';
 import 'loginpage.dart';
+
+//UTILS
 import '../utils/impact.dart';
 
 class SplashPage extends StatelessWidget {

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+//SCREENS
 import 'datascreen.dart';
 import 'map.dart';
 import 'goalpage.dart';
@@ -40,7 +42,8 @@ class _HomepageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       extendBody: true,
-      body: Stack( // SafeArea widget to avoid system UI overlaps
+      body: Stack(
+        // SafeArea widget to avoid system UI overlaps
         children: [
           Positioned.fill(child: getPage(page)),
 
@@ -66,7 +69,11 @@ class _HomepageState extends State<HomePage> {
                     // To go to GoalScreen
                     Expanded(
                       child: IconButton(
-                        icon: Icon(Icons.emoji_events, size: 30, color:Color.fromARGB(255, 250, 239, 221)),
+                        icon: Icon(
+                          Icons.emoji_events,
+                          size: 30,
+                          color: Color.fromARGB(255, 250, 239, 221),
+                        ),
                         onPressed: () {
                           setState(() {
                             page = 1;
@@ -77,7 +84,11 @@ class _HomepageState extends State<HomePage> {
 
                     Expanded(
                       child: IconButton(
-                        icon: Icon(Icons.home, size: 30, color: Color.fromARGB(255, 250, 239, 221),),
+                        icon: Icon(
+                          Icons.home,
+                          size: 30,
+                          color: Color.fromARGB(255, 250, 239, 221),
+                        ),
                         onPressed: () {
                           setState(() {
                             page = 2;
@@ -89,7 +100,11 @@ class _HomepageState extends State<HomePage> {
                     // To go to MapScreen
                     Expanded(
                       child: IconButton(
-                        icon: Icon(Icons.map, size: 30, color: Color.fromARGB(255, 250, 239, 221),),
+                        icon: Icon(
+                          Icons.map,
+                          size: 30,
+                          color: Color.fromARGB(255, 250, 239, 221),
+                        ),
                         onPressed: () {
                           setState(() {
                             page = 3;

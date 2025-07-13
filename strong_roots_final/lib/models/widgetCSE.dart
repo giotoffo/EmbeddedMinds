@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+
+//MODELS
 import '../models/exercise.dart';
+
+//PLUG IN
 import 'package:flutter/cupertino.dart';
 
 // Widget to build a small stat box with icon, label, value, and optional unit

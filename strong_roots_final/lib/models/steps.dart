@@ -1,9 +1,10 @@
+//PLUG IN
 import 'package:intl/intl.dart';
 
 /// Class that represents a step count entry
 class Steps {
   final DateTime time; // Timestamp of the step measurement
-  final int value;     // Number of steps
+  final int value; // Number of steps
 
   // Constructor to initialize time and value
   Steps({required this.time, required this.value});
@@ -19,4 +20,4 @@ class Steps {
     // Returns a readable string representation of the object
     return 'Steps(time: $time, value: $value)';
   } // toString
-} 
+}

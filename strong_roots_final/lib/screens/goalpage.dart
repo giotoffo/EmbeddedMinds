@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+
+//PROVIDERS
 import '../providers/dataprovider.dart';
 import '../providers/profile_provider.dart';
-import '../providers/voucherprovider.dart'; // Aggiungi questo import
+import '../providers/voucherprovider.dart';
+
+//UTILS
 import '../utils/healthscore.dart';
 import '../utils/quotes.dart';
+
+//PLUG IN
 import 'dart:async';
+import 'package:provider/provider.dart';
 import 'package:flutter/cupertino.dart';
 
 class GoalsPage extends StatefulWidget {
