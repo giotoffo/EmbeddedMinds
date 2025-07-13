@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:project_app1/screens/homepage.dart';
 import 'package:provider/provider.dart';
 import '../providers/profile_provider.dart';
 
@@ -87,8 +88,7 @@ class _OnboardingState extends State<Onboarding> {
                   labelText: 'Name',
                   labelStyle: TextStyle(color: Colors.black),
                 ),
-                onChanged: (value) {
-                },
+                onChanged: (value) {},
               ),
 
               const SizedBox(height: 20),
@@ -103,8 +103,7 @@ class _OnboardingState extends State<Onboarding> {
                   labelText: 'Surname',
                   labelStyle: TextStyle(color: Colors.black),
                 ),
-                onChanged: (value){
-                },
+                onChanged: (value) {},
               ),
 
               const SizedBox(height: 20),
@@ -135,7 +134,13 @@ class _OnboardingState extends State<Onboarding> {
                                   ),
                                 )
                                 .toList(),
-                        value: List.generate(80, (index) => (index + 1).toString()).contains(tempAge) ? tempAge : null,
+                        value:
+                            List.generate(
+                                  80,
+                                  (index) => (index + 1).toString(),
+                                ).contains(tempAge)
+                                ? tempAge
+                                : null,
                         onChanged: (value) {
                           setState(() {
                             tempAge = value;
@@ -200,7 +205,7 @@ class _OnboardingState extends State<Onboarding> {
                         },
                         activeColor: Color.fromARGB(255, 240, 100, 147),
                         inactiveTrackColor: Color.fromARGB(255, 249, 244, 252),
-                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -268,8 +273,9 @@ class _OnboardingState extends State<Onboarding> {
                     ),
                   ),
                   const SizedBox(width: 10), // Space between buttons
+
                   ElevatedButton(
-                    onPressed: () async  {
+                    onPressed: () async {
                       profile.setName(nameController.text);
                       profile.setSurname(surnameController.text);
                       profile.setGender(tempGender ?? '');
@@ -278,6 +284,11 @@ class _OnboardingState extends State<Onboarding> {
                       await profile.saveToPrefs();
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(content: Text("Data are saved!")),
+                      );
+                      Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(builder: (_) => HomePage()),
+                        (Route<dynamic> route) => false,
                       );
                     },
                     style: ElevatedButton.styleFrom(
@@ -356,9 +367,14 @@ class GenderButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final color = label == 'F'
-        ? (selected ? const Color.fromARGB(255, 240, 100, 147) : const Color.fromARGB(255, 249, 244, 252))
-        : (selected ? const Color.fromARGB(255, 87, 172, 241) : const Color.fromARGB(255, 249, 244, 252));
+    final color =
+        label == 'F'
+            ? (selected
+                ? const Color.fromARGB(255, 240, 100, 147)
+                : const Color.fromARGB(255, 249, 244, 252))
+            : (selected
+                ? const Color.fromARGB(255, 87, 172, 241)
+                : const Color.fromARGB(255, 249, 244, 252));
 
     return GestureDetector(
       onTap: onTap,

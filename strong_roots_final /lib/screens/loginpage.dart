@@ -1,7 +1,11 @@
-import 'homepage.dart';
+import 'package:project_app1/screens/onboarding.dart';
+
+//UTILS
+import '../utils/impact.dart';
+
+//PLUG IN
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import '../utils/impact.dart';
 
 class LoginPage extends StatelessWidget {
   LoginPage({Key? key}) : super(key: key);
@@ -35,8 +39,9 @@ class LoginPage extends StatelessWidget {
             children: [
               Image.asset('immagini/logo_StrongRoots.png', scale: 2),
 
-              const SizedBox(height: 60), // Space between the log and the text field
-
+              const SizedBox(
+                height: 60,
+              ), // Space between the log and the text field
               // Text box parameters for the email
               TextField(
                 obscureText: false,
@@ -99,9 +104,8 @@ class LoginPage extends StatelessWidget {
                         // To navigate to the homepage
                         Navigator.pushReplacement(
                           context,
-                          MaterialPageRoute(builder: (context) => HomePage()),
+                          MaterialPageRoute(builder: (context) => Onboarding()),
                         );
-
                       } else {
                         // If the credentials are incorrect, show a temporary SnackBar with an error message
                         ScaffoldMessenger.of(context)
@@ -120,7 +124,9 @@ class LoginPage extends StatelessWidget {
                                 top: 1,
                                 bottom: 220,
                               ),
-                              duration: Duration(seconds: 2), // Duration it stays on screen
+                              duration: Duration(
+                                seconds: 2,
+                              ), // Duration it stays on screen
                               content: Text(
                                 "Email or Password incorrect",
                                 textAlign: TextAlign.center,

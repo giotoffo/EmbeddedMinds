@@ -144,6 +144,7 @@ class MapScreen extends StatelessWidget {
                                           decoration: TextDecoration.none,
                                         ),
                                       ),
+
                                       TextSpan(
                                         text: shop['name']!, // Shop name
                                         style: const TextStyle(
@@ -202,6 +203,11 @@ class MapScreen extends StatelessWidget {
                                         : CrossFadeState.showFirst,
                                 duration: const Duration(milliseconds: 300),
                               ),
+                              if (index < shops.length)
+                                const Divider(
+                                  thickness: 1,
+                                  color: Color.fromARGB(255, 0, 0, 0),
+                                ),
                             ],
                           );
                         }),
